@@ -11,6 +11,13 @@ print("Hello, " + myName + "! I am thinking of a number between 1 and 20, you ha
 while guessesTaken < 5:
   print("Take your guess!")
   guess = input()
+  if (guess.isdigit() == False):
+      print("Your input was invalid.")
+      validInput = False
+      while (validInput == False):
+          guess = input("Take your guess!")
+          if (guess.isdigit() == True):
+              validInput = True
   guess = int(guess)
 
   guessesTaken = guessesTaken + 1
